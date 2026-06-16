@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "version": "Agent_V2_Optimized",
+    "total": 56,
+    "valid_cases": 56,
+    "timestamp": "2026-06-16 15:29:36",
+    "duration_seconds": 0.2143
+  },
+  "metrics": {
+    "avg_score": 4.7079,
+    "pass_rate": 1.0,
+    "hit_rate": 1.0,
+    "mrr": 0.9911,
+    "recall_at_3": 0.9911,
+    "precision_at_3": 0.7768,
+    "faithfulness": 0.9654,
+    "relevancy": 0.9455,
+    "agreement_rate": 0.8989,
+    "conflict_rate": 0.1071,
+    "avg_latency_seconds": 0.0293,
+    "p95_latency_seconds": 0.0337,
+    "total_tokens": 4191,
+    "avg_tokens": 74.84,
+    "total_cost_usd": 0.001881
+  },
+  "baseline_metrics": {
+    "avg_score": 4.4196,
+    "pass_rate": 0.8929,
+    "hit_rate": 0.9643,
+    "mrr": 0.9643,
+    "recall_at_3": 0.9643,
+    "precision_at_3": 0.5357,
+    "faithfulness": 0.9715,
+    "relevancy": 0.8826,
+    "agreement_rate": 0.8952,
+    "conflict_rate": 0.1071,
+    "avg_latency_seconds": 0.047,
+    "p95_latency_seconds": 0.0561,
+    "total_tokens": 4606,
+    "avg_tokens": 82.25,
+    "total_cost_usd": 0.004146
+  },
+  "regression": {
+    "baseline_version": "Agent_V1_Base",
+    "candidate_version": "Agent_V2_Optimized",
+    "deltas": {
+      "avg_score": 0.2883,
+      "pass_rate": 0.1071,
+      "hit_rate": 0.0357,
+      "mrr": 0.0268,
+      "faithfulness": -0.0061,
+      "relevancy": 0.0629,
+      "agreement_rate": 0.0037,
+      "avg_latency_seconds": -0.0177,
+      "total_cost_usd": -0.0023
+    },
+    "gate": {
+      "decision": "Release",
+      "quality_thresholds": {
+        "avg_score_min": 3.6,
+        "hit_rate_min": 0.85,
+        "mrr_min": 0.75,
+        "agreement_rate_min": 0.7,
+        "pass_rate_min": 0.85
+      },
+      "cost_rule": "Candidate eval cost must be at least 10% lower than baseline.",
+      "reason": "Candidate improves or preserves quality while reducing estimated eval cost."
+    }
+  }
+}
